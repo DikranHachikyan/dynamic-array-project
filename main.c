@@ -47,14 +47,14 @@ int main(int argc, char** argv) {
                           fprintf(stdout,"item:%d poped!\n ",t);
                         }
                         break;
-            case UNSHIFT: t = rand() % 100;
-                          unshift(arr,t);
-                          fprintf(stdout,"item:%d unshifted!\n",t);
-                          break;
             case PUSH:  t = rand()% 100;
                         push(arr,t);
                         fprintf(stdout,"item:%d pushed!\n",t);
                         break;
+            case UNSHIFT: t = rand() % 100;
+                          unshift(arr,t);
+                          fprintf(stdout,"item:%d unshifted!\n",t);
+                          break;
             case SHIFT: res = shift(arr, &t); 
                         if( res != -1)
                           {
@@ -67,7 +67,7 @@ int main(int argc, char** argv) {
                         break;
             case STRINS: straightInsertion(arr);
                          break;
-            case SAVE:  saveToFile( "data", arr );
+            case SAVE:  saveToXML( "data", arr );
                         break;
             case PRINT: print(arr);
                         break;
