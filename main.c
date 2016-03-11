@@ -10,6 +10,7 @@
 #include <assert.h>
 
 #include "inc/darray.h"
+#include "inc/io.h"
 
 /*
  * 
@@ -66,6 +67,8 @@ int main(int argc, char** argv) {
                         break;
             case STRINS: straightInsertion(arr);
                          break;
+            case SAVE:  saveToFile( "data", arr );
+                        break;
             case PRINT: print(arr);
                         break;
             case EXIT: destroy(arr);
