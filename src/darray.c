@@ -47,7 +47,7 @@ Array *createArray()
 void push(Array *arr, int item)
 {
     int *t = NULL;
-    assert(arr);
+    assert(arr != NULL);
     t = realloc( arr->items , sizeof *arr->items * arr->count + sizeof item);
     if( t != NULL )
     {
@@ -56,9 +56,7 @@ void push(Array *arr, int item)
         arr->count++;       
     }
     else
-    {
         fprintf(stdout, "Memory allocation error!\n");
-    }
          
 }
 int pop(Array *arr , int *itm)
@@ -72,7 +70,7 @@ int pop(Array *arr , int *itm)
     *itm = arr->items[ arr->count - 1];
     t = realloc( arr->items , mem);
     arr->items = t;
-    arr->count--;
+    arr->count = arr->count - 1;
 #ifndef NDEBUG
     fprintf(stdout, "DEBUG:count=%d %p\n",arr->count,arr->items);
 #endif    
