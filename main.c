@@ -30,8 +30,7 @@ int main(int argc, char** argv) {
     int t,res;
     arr = createArray();
     assert(arr != NULL);
-    while(1)
-    {
+    for(;;){
 
         fprintf(stdout, "\n%d-push,%d-pop,     %d-unshift,%d-shift,%d-sraightInsert,%d-print,%d-exit:",
                             POP, UNSHIFT, SHIFT, PUSH,  STRINS, PRINT, EXIT);
@@ -40,9 +39,9 @@ int main(int argc, char** argv) {
         fprintf(stdout, "\n%d-push,%d-pop,%d-unshift,   %d-shift,%d-sraightInsert,%d-print,%d-exit:",
                             PUSH, POP, SHIFT, STRINS, PRINT, EXIT, UNSHIFT);
         scanf("%d",&opt);
-        switch(opt)
-        {
-            case POP:   res = pop(arr,&t);
+      
+            if (opt == POP)
+             {           res = pop(arr,&t);
                         if(res == -1)
                         {
                           fprintf(stdout,"The array is empty!");
@@ -51,7 +50,13 @@ int main(int argc, char** argv) {
                         {
                           fprintf(stdout,"item:%d poped!\n ",t);
                         }
-                        break;
+              }
+            switch(opt)
+            {
+            case UNSHIFT: t = rand() % 100;
+                          unshift(arr,t);
+                          fprintf(stdout,"item:%d unshifted!\n",t);
+                          break;
             case PUSH:  t = rand()% 100;
                         push(arr,t);
                         fprintf(stdout,"item:%d pushed!\n",t);
