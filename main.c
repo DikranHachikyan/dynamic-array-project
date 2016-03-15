@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     int res = 0;
     arr = createArray();
     assert(arr != NULL);
-    for(;;){
+    while(1){
 
         fprintf(stdout, "\n%d-push,%d-pop,     %d-unshift,%d-shift,%d-sraightInsert,%d-print,%d-exit:",
                             POP, UNSHIFT, SHIFT, PUSH,  STRINS, PRINT, EXIT);
