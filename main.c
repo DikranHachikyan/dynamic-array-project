@@ -47,16 +47,18 @@ int main(int argc, char** argv) {
                           fprintf(stdout,"item:%d poped!\n ",t);
                         }
               }
-            switch(opt)
-            {
-            case UNSHIFT: t = rand() % 100;
+              else if( opt == UNSHIFT )
+              {           t = rand() % 100;
                           unshift(arr,t);
                           fprintf(stdout,"item:%d unshifted!\n",t);
-                          break;
-            case PUSH:  t = rand()% 100;
+              }
+              else if ( opt == PUSH)
+              {        t = rand()% 100;
                         push(arr,t);
                         fprintf(stdout,"item:%d pushed!\n",t);
-                        break;
+              }
+            switch(opt)
+            {
             case UNSHIFT: t = rand() % 100;
                           unshift(arr,t);
                           fprintf(stdout,"item:%d unshifted!\n",t);
