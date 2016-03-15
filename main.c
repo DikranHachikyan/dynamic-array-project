@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     int t,res;
     arr = createArray();
     assert(arr != NULL);
-    for(;;){
+    do{
 
         fprintf(stdout, "\n%d-push,%d-pop,     %d-unshift,%d-shift,%d-sraightInsert,%d-print,%d-exit:",
                             POP, UNSHIFT, SHIFT, PUSH,  STRINS, PRINT, EXIT);
@@ -85,6 +85,7 @@ int main(int argc, char** argv) {
                         exit(0);
         }
     }
+    while(1);
     return (EXIT_SUCCESS);
 }
 
