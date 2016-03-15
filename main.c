@@ -32,12 +32,8 @@ int main(int argc, char** argv) {
     assert(arr != NULL);
     for(;;){
 
-        fprintf(stdout, "\n%d-push,%d-pop,     %d-unshift,%d-shift,%d-sraightInsert,%d-print,%d-exit:",
+        printf("\n%d-push,%d-pop,     %d-unshift,%d-shift,%d-sraightInsert,%d-print,%d-exit:",
                             POP, UNSHIFT, SHIFT, PUSH,  STRINS, PRINT, EXIT);
-        fprintf(stdout, "\n%d-push,%d-pop,     %d-unshift, %d-shift,%d-sraightInsert,%d-print,%d-exit:",
-                            SHIFT, STRINS, PRINT, EXIT, PUSH, POP, UNSHIFT);
-        fprintf(stdout, "\n%d-push,%d-pop,%d-unshift,   %d-shift,%d-sraightInsert,%d-print,%d-exit:",
-                            PUSH, POP, SHIFT, STRINS, PRINT, EXIT, UNSHIFT);
         scanf("%d",&opt);
       
             if (opt == POP)
